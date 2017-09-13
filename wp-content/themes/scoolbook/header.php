@@ -32,8 +32,8 @@
 		<h2><?php bloginfo('description'); ?></h2>
 		<div id="menu">
 			<ul>
-				<li class="menu_first"><a href="<?php bloginfo('url'); ?>">Главная</a></li>
-				<?php wp_list_pages('title_li=&sort_column=post_title&depth=1'); ?>
+
+				<?php wp_list_pages('title_li=&sort_column=menu_order&depth=1'); ?>
 			</ul>
 		</div>
 		<div id="searchform"><?php include(TEMPLATEPATH . '/searchform.php'); ?></div>
