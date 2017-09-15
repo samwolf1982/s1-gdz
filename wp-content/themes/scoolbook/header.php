@@ -17,7 +17,25 @@
 <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?php bloginfo('rss2_url'); ?>" />
 <link rel="alternate" type="text/xml" title="RSS .92" href="<?php bloginfo('rss_url'); ?>" />
 <link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="<?php bloginfo('atom_url'); ?>" />
-<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
+
+    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/js/booklet-master/src/jquery.booklet.latest.css" type="text/css" rel="stylesheet" media="screen, projection, tv" />
+
+
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <script> window.jQuery || document.write(`<script src="<?php bloginfo('stylesheet_directory'); ?>/js/booklet-master/src/jquery-2.1.0.min.js"></script>`) </script>
+
+
+
+
+
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+
+    <script src="<?php bloginfo('stylesheet_directory'); ?>/js/booklet-master/src/jquery.booklet.latest.min.js" type="text/javascript"></script>
+    <script src="<?php bloginfo('stylesheet_directory'); ?>/js/booklet-master/src/jquery.booklet.latest.min.js" type="text/javascript"></script>
+
+
+
 <?php wp_get_archives('type=monthly&format=link'); ?>
 <?php //comments_popup_script(); // off by default ?>
 <?php wp_head(); ?>

@@ -1,5 +1,4 @@
 <?php
-
 //regster multiple sidebar
 if (function_exists('register_sidebar'))
 {
@@ -209,4 +208,34 @@ class Get_links {
         }
     }
 }
+
+
+
+
+
+
+
+/*
+    * регистрируем хук 'wp_print_styles'
+    */
+add_action('wp_enqueue_scripts', 'add_my_stylesheet');
+
+/*
+ * Добавляем в очередь файл стилей, если он существует.
+ */
+
+function add_my_stylesheet() {
+
+
+    $myStyleUrl = WP_PLUGIN_URL . '/myPlugin/style.css';
+    $myStyleFile = WP_PLUGIN_DIR . '/myPlugin/style.css';
+    if ( file_exists($myStyleFile) ) {
+        wp_register_style('myStyleSheets', $myStyleUrl);
+        wp_enqueue_style( 'myStyleSheets');
+    }
+
+}
+
+
+
 ?>
